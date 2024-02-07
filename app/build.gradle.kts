@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.latexview"
+    namespace = "live.pw.latexview"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.latexview"
+        applicationId = "live.pw.latexview"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

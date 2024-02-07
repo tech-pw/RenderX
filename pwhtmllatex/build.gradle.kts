@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.customlatex"
+    namespace = "live.pw.pwHtmlLatex"
     compileSdk = 34
 
     defaultConfig {
