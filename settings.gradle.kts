@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "LatexView"
 include(":app")
-include(":customlatex")
+include(":pwhtmllatex")
 
