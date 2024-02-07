@@ -47,11 +47,11 @@ private const val TAG = "EquationView"
  * @param layer The layer to render the LaTeX on.
  */
 @Composable
-fun CustomLatexView(
+fun PwHtmlLatex(
     modifier: Modifier = Modifier,
     latex: String,
     textSize: Float = 16f,
-    @ColorInt textColor: Int = Color.Red.toArgb(),
+    @ColorInt textColor: Int = Color.DarkGray.toArgb(),
     textStyle: TextStyle? = null,
     loadFromWebView: Boolean = false,
     onError: (message: String) -> Unit = {},
@@ -63,7 +63,7 @@ fun CustomLatexView(
     val latexSize = with(density) { Dp(textSize).toPx() }
 
     // Determine the font based on the provided textStyle or default values
-    val fontFamily = determineFont(textStyle)
+    val fontFamily : Int  = Utility.determineFont(textStyle)
 
     // State to track invalid LaTeX
     var invalidLatex by remember { mutableStateOf(false) }
@@ -120,39 +120,12 @@ fun CustomLatexView(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
             ),
+            textColor = textColor,
             layer = layer
         )
     }
 }
 
-/**
- * Function to determine the font based on the provided [textStyle] or default values.
- *
- * @param textStyle The style of the text.
- * @return The font resource ID.
- */
-private fun determineFont(textStyle: TextStyle?): Int {
-    return if (textStyle == null) {
-        // Define default font style
-        val font = TextStyle(
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Medium,
-            /* other text style attributes */
-        )
-        // Choose font based on text style or default values
-        if (/*LocalTextStyles.current == BrutalismTextStyle*/ true) {
-            if (font.fontFamily == BrutalismFontFamilyBalsamiq) {
-                R.font.balsamiqsans_regular
-            } else {
-                R.font.roboto_medium_font
-            }
-        } else {
-            R.font.gilroy_medium
-        }
-    } else {
-        R.font.roboto_light
-    }
-}
 
 /**
  * Function to convert LaTeX and HTML to SpannableStringBuilder.

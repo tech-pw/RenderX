@@ -2,6 +2,7 @@ package live.pw.pwHtmlLatex
 
 import android.view.ViewGroup
 import android.webkit.WebView
+import androidx.annotation.ColorInt
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -10,6 +11,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import live.pw.pwHtmlLatex.Utility.determineFont
 import live.pw.pwHtmlLatex.mathJaxView.MathJaxViewV1
 
 @Composable
@@ -21,19 +23,13 @@ fun MathView(
         fontSize = 16.sp,
         fontWeight = FontWeight.Medium,
     ),
-    textColor: Color = Color.Black,
+    @ColorInt textColor: Int = Color.DarkGray.toArgb(),
     layer: Int? = null
 ) {
-    val fontFamily = if (/*LocalTextStyles.current == BrutalismTextStyle*/ true) {
-        if (/*textStyle.fontFamily == BrutalismFontFamilyBalsamiq*/  true) {
-            "BalsamiqsansRegular"
-        } else {
-            "RobotoMedium"
-        }
-    } else {
-        "GilroyMedium"
-    }
-    val colorHex = "#" + Integer.toHexString(textColor.toArgb()).substring(2)
+
+    val fontFamily = Utility.determineFontName(textStyle)
+
+    val colorHex = "#" + Integer.toHexString(textColor).substring(2)
     AndroidView(modifier = modifier, factory = {
         MathJaxViewV1(it, null).apply {
             layoutParams = ViewGroup.LayoutParams(
