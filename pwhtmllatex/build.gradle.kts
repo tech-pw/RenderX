@@ -1,5 +1,5 @@
 buildscript {
-    val pwuiPomVersion by extra("1.0.0")
+    val pwuiPomVersion by extra("0.0.1")
     val pwuiPomGroupID by extra("live.pw")
     val pwuiArtifact by extra("pwhtmllatex-release.aar")
 }
