@@ -1,3 +1,9 @@
+buildscript {
+    val pwuiPomVersion by extra("1.0.0")
+    val pwuiPomGroupID by extra("live.pw")
+    val pwuiArtifact by extra("pwhtmllatex-release.aar")
+}
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -47,6 +53,15 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+apply {
+    from("mavenPublish.gradle")
 }
 
 dependencies {
