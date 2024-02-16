@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/tech-pw/pwHtmlLatex.svg)](https://jitpack.io/#tech-pw/pwHtmlLatex)
+
 **Title: An Native Android liberary to render latex with HTML support**
 
 **Introduction:**
