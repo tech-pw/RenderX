@@ -11,10 +11,7 @@ In the realm of Android development, the struggle with sluggish equation renderi
     
 ![Latex rendering](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.34.50%20PM.png)  ![MathJax Rendeing](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.35.03%20PM.png) 
 
-![Video Recording]
-<video controls>
-  <source src="https://github.com/tech-pw/pwHtmlLatex/blob/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screen%20Recording%202024-02-07%20at%205.28.24%20PM.mov?raw=true">
-</video>
+![Video Recording](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screen%20Recording%202024-02-07%20at%205.28.24%20PM.mov)
 
 
 2. **HTML + LaTeX Synergy:**
