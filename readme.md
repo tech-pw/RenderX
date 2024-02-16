@@ -9,9 +9,12 @@ In the realm of Android development, the struggle with sluggish equation renderi
     - Bid farewell to the performance bottlenecks associated with webviews. pwHtmlLatex champions native rendering, dramatically enhancing the speed of LaTeX equation display on Android. Our benchmark tests reveal a 50-80% improvement, translating to a more responsive user experience.
     So we have captured the frame rate graph while rendering Latex equations in pwHtmlLatex vs MathJax. The difference can be visually seen.
     
-![Latex rendering](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.34.50%20PM.png)  ![MathJax Rendeing](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.35.03%20PM.png) 
+<div style="display: flex;">
+    <img src="https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.34.50%20PM.png" alt="Latex rendering" style="width: 45%;">
+    <img src="https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screenshot%202024-02-16%20at%203.35.03%20PM.png" alt="MathJax Rendering" style="width: 45%;">
+</div>
 
-![Video Recording](https://raw.githubusercontent.com/tech-pw/pwHtmlLatex/aaa31df197a3320aea3a868b97d79b88038b3f5b/screenshots/Screen%20Recording%202024-02-07%20at%205.28.24%20PM.mov)
+https://github.com/tech-pw/pwHtmlLatex/assets/160108670/65903362-d56b-4a3a-bb7c-776dd3856c4f
 
 
 2. **HTML + LaTeX Synergy:**
