@@ -1,2 +1,5 @@
 jdk:
   - openjdk17
+install:
+  - FILE="-Dfile=pwhtmllatex-release.aar" #com-atifqamar-customtoast.aar
+  - mvn install:install-file $FILE -DgroupId=pw.live -DartifactId=pwHtmlLatex -Dversion=0.0.1 -Dpackaging=aar -DgeneratePom=true
