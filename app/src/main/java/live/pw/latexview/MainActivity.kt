@@ -16,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import live.pw.latexview.ui.theme.LatexViewTheme
-import live.pw.pwHtmlLatex.PwHtmlLatex
+import live.pw.renderX.RenderX
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +57,7 @@ fun ExampleView(modifier: Modifier = Modifier) {
 
 @Composable
 fun LatexEquationsExample() {
-    PwHtmlLatex(
+    RenderX(
         latex = "<h2>LaTeX Equations:</h2>\n" +
                 "\n" +
                 "  <p>Example 1: Equation 1 \\(e^{i\\pi} + 1 = 0\\)</p>\n" +
@@ -81,7 +81,7 @@ fun LatexEquationsExample() {
 
 @Composable
 fun MathMLEquationExample() {
-    PwHtmlLatex(
+    RenderX(
         latex = "<h2>MathML Equations:</h2>\n" +
                 "\n" +
                 "  <p>Example 1: Equation 1 <math xmlns=\"http://www.w3.org/1998/Math/MathML\">\n" +

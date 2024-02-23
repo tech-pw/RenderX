@@ -1,18 +1,24 @@
+buildscript {
+    val pwuiPomVersion by extra("0.0.1")
+    val pwuiPomGroupID by extra("live.pw")
+    val pwuiArtifact by extra("renderX-release.aar")
+}
+
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "live.pw.latexview"
+    namespace = "live.pw.renderX"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "live.pw.latexview"
+
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+//        versionCode = 1
+//        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -47,12 +53,19 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
-
+apply {
+    from("mavenPublish.gradle")
+}
 
 dependencies {
 
-    implementation(project(":renderX"))
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -68,5 +81,14 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
+    // JLatexView
+    implementation ("ru.noties:jlatexmath-android:0.2.0")
+    // for Cyrillic symbols
+    implementation ("ru.noties:jlatexmath-android-font-cyrillic:0.2.0")
+    // for Greek symbols
+    implementation ("ru.noties:jlatexmath-android-font-greek:0.2.0")
+    // Coil
+    implementation ("io.coil-kt:coil:2.5.0")
+    implementation("io.coil-kt:coil-gif:2.5.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 }

@@ -17,5 +17,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "LatexView"
 include(":app")
-include(":pwhtmllatex")
+include(":renderX")
 
