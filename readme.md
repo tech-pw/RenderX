@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/tech-pw/renderX.svg)](https://jitpack.io/#tech-pw/renderX)
+[![](https://jitpack.io/v/tech-pw/RenderX.svg)](https://jitpack.io/#tech-pw/RenderX)
 
 **Title: An Native Android liberary to render latex with HTML support**
 
@@ -74,7 +74,7 @@ dependencyResolutionManagement {
 
 ```	
 dependencies {
-	        implementation 'com.github.tech-pw:renderX:$version'
+	        implementation 'com.github.tech-pw:RenderX:$version'
 	}
 
 ```
