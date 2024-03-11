@@ -1,6 +1,6 @@
 [![](https://jitpack.io/v/tech-pw/RenderX.svg)](https://jitpack.io/#tech-pw/RenderX)
 
-**Title: An Native Android liberary to render latex with HTML support**
+**Title: An Native Android library to render latex with HTML support**
 
 **Introduction:**
 In the realm of Android development, the struggle with sluggish equation rendering has been all too real. RenderX steps into the spotlight as a game-changing solution, not only accelerating LaTeX rendering but also seamlessly handling HTML with a nuanced fallback mechanism. 
